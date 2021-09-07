@@ -2,7 +2,19 @@
 
 
 import subprocess
-import sys
+import optparse
+
+
+parser = optparse.OptionParser()
+
+
+parser.add_option("-i", "--interface", dest="interface", help="Interface whose MAC address will be changed")
+parser.add_option("-m", "--mac", dest="new_mac", help="New MAC address")
+
+parser.parser_args()
+
+
+parser.add_option(
 
 interface = sys.argv[1]
 new_mac = sys.argv[2]
