@@ -4,7 +4,7 @@
 import subprocess
 import sys
 
-interface = sys.argv[0]
+interface = sys.argv[1]
 
 
 subprocess.call("ifconfig wlan0 down", shell=True)
