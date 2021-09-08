@@ -44,6 +44,6 @@ change_mac(options.interface, options.new_mac)
 mac_add_after = check_mac_address(options.interface)
 
 if mac_add_after == options.new_mac:
-    print(f"[+] MAC address was succesfully change to {mac_add_after}")
+    print(f"[+] MAC address was succesfully changed to {mac_add_after}")
 else:
-    print(f"[-] Fail. MAC address unchanged. MAC address = {mac_add_after}"
+    print(f"[-] Fail. MAC address unchanged. MAC address = {mac_add_after}")
