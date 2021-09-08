@@ -21,12 +21,9 @@ def get_arguments():
 
 def change_mac(interface, new_mac):
     print(f"[+] Changing MAC address for {interface} to {new_mac}")
-    try:
-        subprocess.call(["ifconfig", interface, "down"])
-        subprocess.call(["ifconfig", interface, "hw", "ether", new_mac])
-        subprocess.call(["ifconfig", interface, "up"])
-    except: subprocess.CalledProcessError:
-        print("[-] please enter a valid interface")
+    subprocess.call(["ifconfig", interface, "down"])
+    subprocess.call(["ifconfig", interface, "hw", "ether", new_mac])
+    subprocess.call(["ifconfig", interface, "up"])
 
 
 def check_mac_address(interface):
